@@ -24,11 +24,10 @@
 }
 
 .navigation {
-  color: var(--text);
   text-align: center;
 }
 
-.navigationLink {
+.navigation a {
   margin: 10px;
   display: inline-flex;
   border-radius: 20px;
@@ -36,12 +35,17 @@
   text-decoration: none;
   transition: all 0.5s;
   border: 1px solid transparent;
+  color: var(--text);
 }
 
-.navigationLink:hover {
+.navigation a:hover {
   color: var(--yellow);
   cursor: pointer;
   border: 1px solid var(--border);
+}
+
+.navigation a.active {
+  color: var(--yellow);
 }
 
 .themeButton {

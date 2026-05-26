@@ -1,22 +1,36 @@
 import LogoIcon from "@/assets/logo.svg";
 import s from "./Header.module.css";
 import { useTheme } from "../../hooks/useTheme";
+import { NavLink } from "react-router";
+import { PATH } from "../../routing/paths";
 
 export const Header = () => {
   const { themeMode, toggleTheme } = useTheme();
 
+  const isActive = ({ isActive }) => (isActive ? s.active : "");
+
   return (
     <header className={s.header}>
       <div className={s.wrapper}>
-        <a href="/" className={s.logo}>
+        <NavLink to={PATH.MAIN} className={s.logo}>
           <img src={LogoIcon} width={140} height={40} />
-        </a>
+        </NavLink>
         <nav className={s.navigation}>
-          <a className={s.navigationLink}>Main</a>
-          <a className={s.navigationLink}>Category Movies</a>
-          <a className={s.navigationLink}>Filtered Movies</a>
-          <a className={s.navigationLink}>Search</a>
-          <a className={s.navigationLink}>Favorites</a>
+          <NavLink to={PATH.MAIN} className={isActive}>
+            Main
+          </NavLink>
+          <NavLink to={PATH.CATEGORY} className={isActive}>
+            Category Movies
+          </NavLink>
+          <NavLink to={PATH.FILTERED} className={isActive}>
+            Filtered Movies
+          </NavLink>
+          <NavLink to={PATH.SEARCH} className={isActive}>
+            Search
+          </NavLink>
+          <NavLink to={PATH.FAVORITES} className={isActive}>
+            Favorites
+          </NavLink>
         </nav>
         <button className={s.themeButton} onClick={toggleTheme}>
           {themeMode === "light" ? "🌙" : "☀️"}
