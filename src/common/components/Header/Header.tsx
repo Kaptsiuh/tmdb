@@ -13,7 +13,7 @@ export const Header = () => {
     <header className={s.header}>
       <div className={s.wrapper}>
         <NavLink to={PATH.MAIN} className={s.logo}>
-          <img src={LogoIcon} width={140} height={40} />
+          <img src={LogoIcon} />
         </NavLink>
         <nav className={s.navigation}>
           <NavLink to={PATH.MAIN} className={isActive}>

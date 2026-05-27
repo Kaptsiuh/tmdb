@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 15px;
+  padding: 15px;
 }
 
 .logo {
@@ -17,6 +17,8 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
+  width: 140px;
+  height: 40px;
 }
 
 .logo:hover {
@@ -61,6 +63,27 @@
 .themeButton:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    padding: 5px;
+  }
+  .logo {
+    width: 70px;
+    height: 20px;
+  }
+
+  .navigation a {
+    margin: 0;
+    padding: 5px;
+    font-size: 0.7rem;
+  }
+
+  .themeButton {
+    min-width: 24px;
+    height: 24px;
+  }
 }
 
 @media (max-width: 400px) {

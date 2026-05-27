@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router";
-import { Main } from "../../app/pages/Main";
+import { Main } from "@/app/pages/Main/Main";
 import { PATH } from "./paths";
-import { Category } from "../../app/pages/Category";
-import { Filtered } from "../../app/pages/Filtered";
-import { Search } from "../../app/pages/Search";
-import { Favorites } from "../../app/pages/Favorites";
+import { Category } from "@app/pages/Category";
+import { Filtered } from "@app/pages/Filtered";
+import { Search } from "@app/pages/Search";
+import { Favorites } from "@app/pages/Favorites";
 import { PageNotFound } from "../components/PageNotFound/PageNotFound";
 
 export const Routing = () => {
