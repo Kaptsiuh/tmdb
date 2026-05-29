@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import s from "./Main.module.css";
 import { instance } from "@/common/instance/instance";
 import type { Movie } from "@/common/types/types";
+import { SectionCategory } from "@/common/components/SectionCategory/SectionCategory";
 
 export const Main = () => {
   const [randomMovie, setRandomMovie] = useState<null | Movie>(null);
@@ -37,6 +38,12 @@ export const Main = () => {
             <button className={s.searchButton}>Search</button>
           </div>
         </div>
+      </div>
+      <div className={s.categories}>
+        <SectionCategory title="Popular Movies" category={"popular"} />
+        <SectionCategory title="Top Rated Movies" category={"top_rated"} />
+        <SectionCategory title="Upcoming Movies" category={"upcoming"} />
+        <SectionCategory title="Now Playing Movies" category={"now_playing"} />
       </div>
     </>
   );

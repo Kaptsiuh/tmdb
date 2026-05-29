@@ -1,0 +1,32 @@
+.category {
+  margin-bottom: 40px;
+  padding: 0 15px;
+}
+
+.categoryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  color: var(--title);
+  margin: 0;
+}
+
+.categoryLink {
+  color: var(--title);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  transition: all 0.5s;
+}
+
+.categoryLink:hover {
+  opacity: 0.8;
+  color: var(--yellow);
+  border-color: var(--yellow);
+}

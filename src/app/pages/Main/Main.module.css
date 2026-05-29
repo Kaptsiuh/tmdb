@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  min-height: 100vh;
+  min-height: 700px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -56,6 +56,10 @@
 
 .searchButton:hover {
   transform: scale(1.05);
+}
+
+.categories {
+  padding: 40px 0;
 }
 
 @media (max-width: 800px) {
